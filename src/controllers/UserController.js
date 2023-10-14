@@ -22,7 +22,17 @@ async function pegarPorId(req,res) {
         res.json(user)
 }
 
+async function update (req, res) {
+    const { nome, preco, tipo,  imagem } = req.body;
+
+    let data = {};
+
+    data = { nome, preco, tipo,  imagem  } 
+    user = await Users.findByIdAndUpdate({_id}, data, {new: true}) 
+    return res.status(200).json(user)
+  
+}
 
 
 
-export { getUsers, createUsers, deleteUser, pegarPorId }
+export { getUsers, createUsers, deleteUser, pegarPorId, update }
