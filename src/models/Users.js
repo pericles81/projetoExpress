@@ -1,20 +1,20 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-    nome:{
-        type : String,
+    nome: {
+        type: String,
         required: true
     },
-    preco:{
-        type : String,
+    preco: {
+        type: String,
         required: true
     },
-    imagem:{
-        type : String,
+    imagem: {
+        type: String,
         required: true
     },
-    tipo:{
-        type : String,
+    tipo: {
+        type: String,
         required: true
     }
 })
